@@ -1,0 +1,23 @@
+.recognitionPage{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    /* 95B9C7 */
+    height: 100vh;
+}
+
+.recognitionPage .mainDiv{ 
+border-radius: 20px;
+display: flex;
+justify-content: center;
+flex-direction: column;
+margin:  auto;
+padding: 20px 50px;
+
+}
+
+.recognitionPage .mainDiv .webcamDiv{
+display: flex;
+flex-direction: column;
+align-items: center;
+}

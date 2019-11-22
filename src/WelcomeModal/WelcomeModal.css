@@ -1,0 +1,11 @@
+.welcomeModalDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcomeModalDiv p{
+    font-size: 60px;
+    color: #000;
+}
