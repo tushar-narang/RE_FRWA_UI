@@ -3,7 +3,7 @@ import Header from '.././Header/Header'
 import "./RecognitionPage.css"
 import Webcam from 'react-webcam';
 import WelcomeModal from '.././WelcomeModal/WelcomeModal';
-import background from '../images/background2.jpg'
+import background from '../images/background3.jpg'
 import { Button } from '@material-ui/core';
 
 import StatCard from '../components/StatCard'
@@ -82,7 +82,7 @@ class RecognitionPage extends Component {
           
       return (
           <div className="recognitionPage" style={{backgroundImage: "url("+background+")",backgroundSize: 'cover', overflow: 'hidden'}}>
-              <Header buttonText="+ New Registration"/>
+              <Header logout={()=> this.props.logout()}/>
 
 
               <div className="mainDiv"  >

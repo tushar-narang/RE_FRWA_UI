@@ -17,10 +17,10 @@ const routing = (
     <Router>
       <div>
       <Route exact path="/" component={App} />
-        <Route exact path="/recognition" component={RecognitionPage} />
+        {/* <Route exact path="/recognition" component={RecognitionPage} />
         <Route exact path="/register" component={DataTrainPage} />
-        <Route exact path="/admin/:name" component={AdminPanel} />
-        <Route exact path="/project" component={App} />
+        <Route exact path="/admin" component={AdminPanel} />
+        <Route exact path="/project" component={App} /> */}
       </div>
     </Router>
   )

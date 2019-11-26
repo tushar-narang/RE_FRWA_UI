@@ -6,7 +6,7 @@ import WelcomeModal from '.././WelcomeModal/WelcomeModal';
 import EnterName from './01_EnterName';
 import EnterEmail from './02_EnterEmail';
 import ClickPhoto from './03_ClickPhoto';
-import background from '../images/background2.jpg'
+import background from '../images/background3.jpg'
 import RegisterStudent from './04_Register';
 var cors = require('cors')
 
@@ -52,8 +52,8 @@ class DataTrainPage extends Component {
     render() {
        console.log(this.state)
       return (
-          <div className="dataTrainPage" style={{backgroundImage: "url("+background+")",backgroundSize: 'cover', overflow: 'hidden'}} >
-                <Header/>
+          <div className="dataTrainPage" style={{backgroundImage: "url("+background+")",backgroundSize: 'cover', overflow: 'hidden'}}>
+                <Header logout={()=> this.props.logout()}/>
               <div className="mainDiv">
                 {
                     this.state.stage == '1'?

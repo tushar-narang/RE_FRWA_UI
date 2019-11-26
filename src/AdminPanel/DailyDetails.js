@@ -54,31 +54,24 @@ class DailyDetails extends Component{
 
   showPieChart = (chartType, count)  => {
     this.setState({
-        showchart: false,
-    }, () => {
-        this.setState({
-            chartType: chartType,
-            showchart: true,
-            chartData: [
-                {y: count/this.state.data['total']*100, label: 'Present'},
-                {y:100 - count/this.state.data['total']*100, label: 'Absent'}
-            ]
-        })
-    }   
-  )
+        chartType: chartType,
+        showchart: true,   
+        chartvalue: count
+    })  
   }
     render(){
        
        console.log(this.state)
         return(
-            <div style={{width:'100vw', paddingTop:20, backgroundColor:'#DCDCDC'}}>
+            <div style={{paddingTop:20, width:'100vw', height:'100vh'}}>
 
                 <div style={{ display:'flex', justifyContent:'flex-end', marginRight:40, marginBottom:10}}>
                     <span style={{marginTop:5}}> &nbsp; From  &nbsp;</span> 
                     <DatePicker
                     selected={this.state.selectedDate}
                     onChange={this.handleStartDateChange}
-                    dateFormat="dd-MM-yyyy"/>
+                    dateFormat="dd-MM-yyyy"
+                    />
                     <span style={{marginTop:5}}> &nbsp; To &nbsp;</span> 
                     <DatePicker
                     selected={this.state.endDate}
@@ -89,7 +82,7 @@ class DailyDetails extends Component{
                 <Container>
                     <Row>
                         <Col lg={3} sm={6} 
-                         onClick={() => this.showPieChart("Breakfast", this.state.data['count_breakfast'])}
+                         onClick={() => this.showPieChart("breakfast", this.state.data['count_breakfast'])}
                          style={{cursor:'pointer'}}>
                             <StatCard
                                 bigIcon={<i className="pe-7s-server text-warning" />}
@@ -101,7 +94,7 @@ class DailyDetails extends Component{
                                 />
                         </Col>
                         <Col lg={3} sm={6} 
-                         onClick={() => this.showPieChart("Lunch", this.state.data['count_lunch'])}
+                         onClick={() => this.showPieChart("lunch", this.state.data['count_lunch'])}
                          style={{cursor:'pointer'}}>
                             <StatCard
                                 bigIcon={<i className="pe-7s-server text-warning" />}
@@ -112,7 +105,7 @@ class DailyDetails extends Component{
                                />
                         </Col>
                         <Col lg={3} sm={6} 
-                         onClick={() => this.showPieChart("High Tea", this.state.data['count_hitea'])}
+                         onClick={() => this.showPieChart("hi-tea", this.state.data['count_hitea'])}
                          style={{cursor:'pointer'}}>
                             <StatCard
                                 bigIcon={<i className="pe-7s-server text-warning" />}
@@ -137,7 +130,7 @@ class DailyDetails extends Component{
                 </Container>
                 {this.state.showchart ? 
                 <div>
-                    <PieChart chartType={this.state.chartType} chartData={this.state.chartData} date={this.state.selectedDate} endDate={this.state.endDate}/>
+                    <PieChart chartType={this.state.chartType} count={this.state.chartvalue} total={this.state.data['total']} date={this.state.selectedDate} endDate={this.state.endDate}/>
                 </div> : ''}
              
             </div>

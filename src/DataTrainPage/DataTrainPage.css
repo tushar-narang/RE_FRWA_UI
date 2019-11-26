@@ -4,7 +4,7 @@
         background-color: #fff;
         /* 95B9C7 */
         height: 100vh;
-  
+        
     
 }
 
@@ -15,6 +15,7 @@
     flex-direction: column;
     margin:  auto;
     padding: 20px 50px;
+
 }
 
 .dataTrainPage .mainDiv .webcamDiv{

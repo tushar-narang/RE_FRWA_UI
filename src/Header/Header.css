@@ -1,7 +1,7 @@
 .header{
     height: 60px;
     align-items: center;
-
+background-color: blue;
     display: flex;
     flex-direction: row;
     border-bottom: 1px solid black;
@@ -11,17 +11,21 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-left: 30px;
+    margin-left: 50px;
     font-weight: 20px;
-    font-size: 25px; 
+    font-size: 22px; 
+    margin-bottom: -10px;
+    color: white;
 }
 
 .header .projectSubName{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-left: 30px; 
+    margin-top: 0px;
+    margin-left: 50px; 
     font-size: 15px;
+    color: white;
 }
 .header .buttonDiv{
     flex: 1;
